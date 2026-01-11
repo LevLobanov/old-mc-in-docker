@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  bta_server:
+    build: ./bta_server
+    container_name: bta-mc-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./bta_server:/app
+    command: ["java", "-Xmx4G", "-jar", "/app/bta-server.jar", "nogui"]
+    restart: unless-stopped
+  reindev_server:
+    build: ./reindev_server
+    container_name: reindev-mc-server
+    ports:
+      - "25566:25565"
+    volumes:
+     - ./reindev_server:/app
+    command: ["java", "-Xmx4G", "-jar", "/app/reindev-server.jar", "nogui"]
+    restart: unless-stopped

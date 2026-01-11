@@ -1,0 +1,13 @@
+datapacks/
+languages/
+logs/
+world/
+
+server.log
+banned-ips.txt
+banned-players.txt
+ops.txt
+white-list.txt
+
+alert-blocks.txt
+alert-items.txt
